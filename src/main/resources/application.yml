@@ -1,0 +1,14 @@
+# Specifies the Message Service (node) name
+spring:
+  application:
+    name: message-service
+
+# The port number that the Message Service process will bind to
+server:
+  port: 3333
+
+# We need to specify the service discovery (Eureka) URL so that the Message Service micro service could register there.
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1111/eureka
